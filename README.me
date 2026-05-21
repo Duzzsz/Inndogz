@@ -1,1 +1,316 @@
+# README — InnDogz 🐾
+
+## 📌 Sobre o Projeto
+
+O **InnDogz** é uma plataforma completa de hospedagem para cachorros, desenvolvida para automatizar reservas, validação de usuários e comunicação por e-mail.
+
+O sistema possui:
+
+* frontend moderno e responsivo;
+* backend em Node.js;
+* envio de e-mails com código de verificação;
+* confirmação de reservas;
+* armazenamento local de dados;
+* painel administrativo;
+* sistema de autenticação inicial.
+
+O objetivo do projeto é oferecer uma experiência profissional para hotéis pet e servir como base para aplicações reais.
+
+---
+
+# ✨ Funcionalidades
+
+## 👤 Cadastro de Usuário
+
+* criação de conta;
+* validação de campos obrigatórios;
+* verificação de e-mail;
+* prevenção de e-mails duplicados;
+* armazenamento seguro de dados.
+
+---
+
+## 📧 Verificação por Código
+
+O sistema:
+
+* gera um código de 6 dígitos;
+* envia o código automaticamente por e-mail;
+* valida o código informado;
+* remove o código após utilização;
+* possui tempo de expiração para segurança.
+
+---
+
+## 🐶 Cadastro de Pets
+
+O tutor pode cadastrar:
+
+* foto do cachorro;
+* nome;
+* raça;
+* porte;
+* peso;
+* sexo;
+* idade;
+* alergias;
+* observações;
+* carteira de vacinação;
+* vacina antirrábica.
+
+---
+
+## 📅 Sistema de Reserva
+
+Permite:
+
+* selecionar datas;
+* calcular hospedagem;
+* adicionar múltiplos cães;
+* definir responsável pela retirada;
+* gerar comprovante automaticamente.
+
+---
+
+## ✉️ Envio Automático de E-mails
+
+O backend envia:
+
+* código de confirmação;
+* confirmação de reserva;
+* comprovante completo da hospedagem.
+
+---
+
+## 👑 Painel Administrativo
+
+O sistema possui painel administrativo com:
+
+* total de usuários;
+* total de reservas;
+* listagem de usuários cadastrados.
+
+---
+
+# 🔐 Segurança do Sistema
+
+O backend já possui:
+
+* validação de campos obrigatórios;
+* expiração de código;
+* remoção automática do código após uso;
+* ocultação de senha nas rotas;
+* variáveis sensíveis protegidas em `.env`.
+
+---
+
+# 🚀 Tecnologias Utilizadas
+
+## Frontend
+
+* HTML5
+* CSS3
+* JavaScript Vanilla
+
+## Backend
+
+* Node.js
+* Express.js
+* Resend API
+* File System (`fs`)
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
+InnDogz/
+│
+├── public/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── uploads/
+│
+├── db.json
+├── server.js
+├── package.json
+├── .env
+└── README.md
+```
+
+---
+
+# ⚙️ Instalação
+
+## 1. Clone o projeto
+
+```bash
+git clone https://github.com/seuusuario/inndogz.git
+```
+
+---
+
+## 2. Entre na pasta
+
+```bash
+cd inndogz
+```
+
+---
+
+## 3. Instale as dependências
+
+```bash
+npm install
+```
+
+---
+
+## 4. Configure o arquivo `.env`
+
+```env
+PORT=3000
+
+RESEND_API_KEY=sua_chave_resend
+
+EMAIL_FROM=InnDogz <noreply@seudominio.com>
+```
+
+---
+
+## 5. Inicie o servidor
+
+```bash
+node server.js
+```
+
+---
+
+# 🌐 Rotas da API
+
+## Cadastro
+
+```http
+POST /api/cadastro
+```
+
+---
+
+## Verificação de Código
+
+```http
+POST /api/verificar-codigo
+```
+
+---
+
+## Login
+
+```http
+POST /api/login
+```
+
+---
+
+## Reserva
+
+```http
+POST /api/reserva
+```
+
+---
+
+# 🔄 Fluxo Completo do Sistema
+
+```text
+Usuário cria conta
+        ↓
+Frontend envia dados
+        ↓
+Backend gera código
+        ↓
+Resend envia e-mail
+        ↓
+Usuário verifica código
+        ↓
+Reserva é criada
+        ↓
+Comprovante enviado
+        ↓
+Dados salvos no db.json
+```
+
+---
+
+# ☁️ Deploy
+
+Você pode hospedar o projeto nas seguintes plataformas:
+
+| Plataforma        | Link                                       |
+| ----------------- | ------------------------------------------ |
+| Railway           | [https://railway.app](https://railway.app) |
+| Render            | [https://render.com](https://render.com)   |
+| Vercel (Frontend) | [https://vercel.com](https://vercel.com)   |
+
+---
+
+# 📈 Melhorias Futuras
+
+O projeto pode evoluir com:
+
+* autenticação JWT;
+* MongoDB;
+* PostgreSQL;
+* login completo;
+* upload real de imagens;
+* sistema de pagamento;
+* integração com calendário;
+* agendamento automático;
+* Docker;
+* deploy em VPS;
+* dashboard avançado;
+* notificações em tempo real.
+
+---
+
+# 🎯 Objetivo do Projeto
+
+O **InnDogz Server** foi criado para:
+
+* automatizar reservas;
+* profissionalizar comunicação por e-mail;
+* validar usuários;
+* armazenar informações;
+* servir como backend completo para aplicações pet.
+
+---
+
+# 👨‍💻 Autor
+
+Projeto desenvolvido para estudos e aplicações reais utilizando:
+
+* Node.js
+* APIs REST
+* envio de e-mails
+* persistência local
+* integração externa
+
+---
+
+# 📄 Licença
+
+Este projeto pode ser utilizado para:
+
+* estudos;
+* portfólio;
+* projetos pessoais;
+* adaptação comercial.
+
+---
+
+# 🐾 InnDogz
+
+> “Seu pet merece o melhor hotel da cidade.”
 

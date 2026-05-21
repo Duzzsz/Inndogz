@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnDogz — Hotel para Cachorros</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span>
+      <span class="logo-paw">🐾</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#unidade">Conheça a Unidade</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#" onclick="showScreen('login-screen'); return false;">Login</a></li>
+      <li><a href="#" class="nav-cta" onclick="showScreen('cadastro-screen'); return false;">Cadastro</a></li>
+    </ul>
+    <!-- Controles de acessibilidade -->
+    <div class="nav-controls">
+      <button class="ctrl-btn" id="btn-theme" onclick="toggleTheme()" title="Alternar tema claro/escuro">
+        <span id="theme-icon">🌙</span>
+      </button>
+      <button class="ctrl-btn" onclick="changeFontSize(1)" title="Aumentar fonte">A+</button>
+      <button class="ctrl-btn" onclick="changeFontSize(-1)" title="Diminuir fonte">A−</button>
+    </div>
+    <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🐶 Hospedagem Premium para seu Melhor Amigo</div>
+      <h1>Seu pet merece o <span class="highlight">melhor hotel</span> da cidade</h1>
+      <p>No InnDogz, seu cachorro é tratado com todo o amor, cuidado e atenção que ele merece. Ambientes seguros, equipe especializada e muito carinho.</p>
+      <button class="btn-primary hero-btn" onclick="showScreen('cadastro-screen')">
+        🐾 Faça sua Reserva
+      </button>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card card-float">
+        <div class="card-icon">🏠</div>
+        <div>
+          <strong>Ambiente Seguro</strong>
+          <p>Monitoramento 24h</p>
+        </div>
+      </div>
+      <div class="hero-blob"></div>
+      <div class="dog-illustration">
+        <div class="dog-body"></div>
+        <div class="dog-head"></div>
+        <div class="dog-ear"></div>
+        <div class="dog-tail"></div>
+        <div class="paw-prints">
+          <span>🐾</span><span>🐾</span><span>🐾</span>
+        </div>
+      </div>
+      <div class="hero-card card-float card-right">
+        <div class="card-icon">⭐</div>
+        <div>
+          <strong>4.9 / 5.0</strong>
+          <p>Tutores satisfeitos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="section sobre">
+    <div class="section-tag">Quem somos</div>
+    <h2>Feito por quem <span class="highlight">ama cachorros</span></h2>
+    <p class="section-sub">O InnDogz nasceu da paixão por animais e do desejo de oferecer uma hospedagem segura, aconchegante e cheia de amor para os seus pets enquanto você viaja.</p>
+    <div class="cards-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🩺</div>
+        <h3>Equipe Veterinária</h3>
+        <p>Profissionais treinados e com suporte veterinário disponível para qualquer necessidade.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>Espaço Verde</h3>
+        <p>Áreas ao ar livre para passeios, brincadeiras e socialização entre os hóspedes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📸</div>
+        <h3>Atualizações Diárias</h3>
+        <p>Você recebe fotos e vídeos do seu pet todos os dias para ficar tranquilo.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Segurança Total</h3>
+        <p>Câmeras, cercas de segurança e monitoramento constante de todos os ambientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONHEÇA A UNIDADE -->
+  <section id="unidade" class="section unidade">
+    <div class="section-tag">Nossa estrutura</div>
+    <h2>Conheça a <span class="highlight">Unidade InnDogz</span></h2>
+    <p class="section-sub">Um espaço pensado em cada detalhe para o conforto e a felicidade do seu melhor amigo.</p>
+    <div class="unidade-grid">
+      <div class="unidade-item ui-large">
+        <div class="ui-placeholder ui-p1"><span>🛏️</span><p>Suítes Individuais</p></div>
+      </div>
+      <div class="unidade-item">
+        <div class="ui-placeholder ui-p2"><span>🌳</span><p>Área de Recreação</p></div>
+      </div>
+      <div class="unidade-item">
+        <div class="ui-placeholder ui-p3"><span>🍽️</span><p>Alimentação Especial</p></div>
+      </div>
+      <div class="unidade-item ui-large">
+        <div class="ui-placeholder ui-p4"><span>🚿</span><p>Banho &amp; Tosa</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section contato">
+    <div class="contato-inner">
+      <div class="section-tag">Fale conosco</div>
+      <h2>Entre em <span class="highlight">Contato</span></h2>
+      <p class="section-sub">Estamos prontos para tirar suas dúvidas e ajudar você a planejar a estadia do seu pet.</p>
+      <div class="contato-cards">
+        <div class="contato-card"><span>📍</span><p>Rua dos Pets, 123<br>São Paulo - SP</p></div>
+        <div class="contato-card"><span>📱</span><p>(11) 99999-0000<br>WhatsApp disponível</p></div>
+        <div class="contato-card"><span>✉️</span><p>contato@inndogz.com.br<br>Resposta em até 2h</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span>
+      <span>🐾 Hotel para Cachorros</span>
+    </div>
+    <p>© 2026 InnDogz. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- OVERLAY (fecha ao clicar fora dos modais) -->
+  <div id="overlay" onclick="closeOverlay()"></div>
+
+  <!-- ─── CADASTRO ─── -->
+  <div id="cadastro-screen" class="modal-screen">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <h2>Criar sua conta</h2>
+    <p class="modal-sub">Campos marcados com <span class="req">*</span> são obrigatórios</p>
+    <form id="cadastro-form" onsubmit="handleCadastro(event)" novalidate>
+      <div class="field-group">
+        <label>Nome completo <span class="req">*</span></label>
+        <input type="text" id="cad-nome" placeholder="Seu nome completo" autocomplete="name" />
+        <span class="field-error" id="err-cad-nome"></span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>E-mail <span class="req">*</span></label>
+          <input type="email" id="cad-email" placeholder="seu@email.com" autocomplete="email" />
+          <span class="field-error" id="err-cad-email"></span>
+        </div>
+        <div class="field-group">
+          <label>Telefone <span class="req">*</span></label>
+          <input type="tel" id="cad-telefone" placeholder="(11) 99999-0000" autocomplete="tel" />
+          <span class="field-error" id="err-cad-telefone"></span>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>CPF <span class="req">*</span></label>
+          <input type="text" id="cad-cpf" placeholder="000.000.000-00" maxlength="14" />
+          <span class="field-error" id="err-cad-cpf"></span>
+        </div>
+        <div class="field-group">
+          <label>Senha <span class="req">*</span></label>
+          <input type="password" id="cad-senha" placeholder="Mínimo 6 caracteres" autocomplete="new-password" />
+          <span class="field-error" id="err-cad-senha"></span>
+        </div>
+      </div>
+      <div id="email-existente-msg" class="error-msg hidden">⚠️ Este e-mail já está cadastrado. <a href="#" onclick="showScreen('login-screen'); return false;">Faça login</a>.</div>
+      <button type="submit" class="btn-primary full-width">Próximo: Confirmar E-mail →</button>
+      <p class="toggle-link">Já tem conta? <a href="#" onclick="showScreen('login-screen'); return false;">Entrar</a></p>
+    </form>
+  </div>
+
+  <!-- ─── CÓDIGO DE CONFIRMAÇÃO ─── -->
+  <div id="codigo-screen" class="modal-screen">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <div class="success-icon">📧</div>
+    <h2>Confirme seu E-mail</h2>
+    <p class="modal-sub">Enviamos um código de 6 dígitos para <strong id="codigo-email-display"></strong></p>
+    <div id="codigo-status-msg" class="info-msg">⏳ Enviando código de verificação...</div>
+    <form id="codigo-form" onsubmit="handleCodigo(event)" novalidate>
+      <div class="field-group">
+        <label>Código de verificação <span class="req">*</span></label>
+        <input type="text" id="codigo-input" class="codigo-input" placeholder="000000" maxlength="6" autocomplete="one-time-code" inputmode="numeric" />
+        <span class="field-error" id="err-codigo"></span>
+      </div>
+      <div id="codigo-erro" class="error-msg hidden">❌ Código incorreto. Verifique e tente novamente.</div>
+      <button type="submit" class="btn-primary full-width">Verificar Código ✓</button>
+      <p class="toggle-link">Não recebeu? <a href="#" onclick="reenviarCodigo(); return false;">Reenviar código</a></p>
+    </form>
+  </div>
+
+  <!-- ─── LOGIN ─── -->
+  <div id="login-screen" class="modal-screen">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <h2>Entrar na sua conta</h2>
+    <p class="modal-sub">Bem-vindo(a) de volta!</p>
+    <form id="login-form" onsubmit="handleLogin(event)" novalidate>
+      <div class="field-group">
+        <label>E-mail <span class="req">*</span></label>
+        <input type="email" id="login-email" placeholder="seu@email.com" autocomplete="email" />
+        <span class="field-error" id="err-login-email"></span>
+      </div>
+      <div class="field-group">
+        <label>Senha <span class="req">*</span></label>
+        <input type="password" id="login-senha" placeholder="Sua senha" autocomplete="current-password" />
+        <span class="field-error" id="err-login-senha"></span>
+      </div>
+      <div id="login-erro" class="error-msg hidden">❌ E-mail ou senha incorretos.</div>
+      <button type="submit" class="btn-primary full-width">Entrar →</button>
+      <p class="toggle-link">Não tem conta? <a href="#" onclick="showScreen('cadastro-screen'); return false;">Cadastre-se</a></p>
+    </form>
+  </div>
+
+  <!-- ─── CADASTRO DO CACHORRO ─── -->
+  <div id="cachorro-screen" class="modal-screen modal-wide">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <div class="step-indicator">
+      <span class="step active">1. Cadastro</span>
+      <span class="step-sep">→</span>
+      <span class="step active">2. Seu Pet</span>
+      <span class="step-sep">→</span>
+      <span class="step">3. Reserva</span>
+    </div>
+
+    <!-- Badges dos cachorros já cadastrados -->
+    <div id="cachorros-cadastrados"></div>
+
+    <h2 id="cachorro-title">Cadastrar Cachorro 🐶</h2>
+    <p class="modal-sub">Campos com <span class="req">*</span> são obrigatórios</p>
+    <form id="cachorro-form" onsubmit="handleCachorro(event)" novalidate>
+
+      <!-- Foto do cachorro -->
+      <div class="field-group">
+        <label>Foto do cachorro <span class="req">*</span></label>
+        <div class="upload-area foto-upload-area" id="foto-upload-area" onclick="triggerUpload('dog-foto')">
+          <input type="file" id="dog-foto" accept="image/jpeg,image/png,image/webp" onchange="handleFotoUpload(this)" />
+          <div id="foto-placeholder">
+            <span style="font-size:2rem;">📷</span>
+            <span id="label-dog-foto" style="display:block;font-weight:700;color:var(--gray-400);">Clique para adicionar uma foto</span>
+            <small style="color:var(--gray-400);">JPG, PNG ou WEBP — máx. 5MB</small>
+          </div>
+          <img id="foto-preview" class="hidden foto-preview-img" alt="Preview" />
+        </div>
+        <span class="field-error" id="err-dog-foto"></span>
+      </div>
+
+      <div class="field-row">
+        <div class="field-group">
+          <label>Nome do cachorro <span class="req">*</span></label>
+          <input type="text" id="dog-nome" placeholder="Ex: Rex" />
+          <span class="field-error" id="err-dog-nome"></span>
+        </div>
+        <div class="field-group">
+          <label>Raça <span class="req">*</span></label>
+          <input type="text" id="dog-raca" placeholder="Ex: Golden Retriever" />
+          <span class="field-error" id="err-dog-raca"></span>
+        </div>
+      </div>
+
+      <div class="field-row three-cols">
+        <div class="field-group">
+          <label>Porte <span class="req">*</span></label>
+          <select id="dog-porte">
+            <option value="">Selecione</option>
+            <option value="Mini">Mini (até 4kg)</option>
+            <option value="Pequeno">Pequeno (4–10kg)</option>
+            <option value="Médio">Médio (10–25kg)</option>
+            <option value="Grande">Grande (25–45kg)</option>
+            <option value="Gigante">Gigante (45kg+)</option>
+          </select>
+          <span class="field-error" id="err-dog-porte"></span>
+        </div>
+        <div class="field-group">
+          <label>Peso (kg) <span class="req">*</span></label>
+          <input type="number" id="dog-peso" placeholder="Ex: 12" min="0.1" step="0.1" />
+          <span class="field-error" id="err-dog-peso"></span>
+        </div>
+        <div class="field-group">
+          <label>Sexo <span class="req">*</span></label>
+          <select id="dog-sexo">
+            <option value="">Selecione</option>
+            <option value="Macho">Macho</option>
+            <option value="Fêmea">Fêmea</option>
+          </select>
+          <span class="field-error" id="err-dog-sexo"></span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Idade <span class="req">*</span></label>
+        <input type="text" id="dog-idade" placeholder="Ex: 3 anos" />
+        <span class="field-error" id="err-dog-idade"></span>
+      </div>
+
+      <div class="field-group">
+        <label>Possui deficiência?</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="deficiencia" value="nao" checked /> Não</label>
+          <label class="radio-label"><input type="radio" name="deficiencia" value="sim" /> Sim</label>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Alergias <span class="label-opt">(opcional)</span></label>
+        <input type="text" id="dog-alergias" placeholder="Ex: frango, pelo de gato..." />
+      </div>
+      <div class="field-group">
+        <label>Observações gerais <span class="label-opt">(opcional)</span></label>
+        <textarea id="dog-obs" placeholder="Comportamento, rotina ou necessidades especiais..."></textarea>
+      </div>
+
+      <!-- Vacinação -->
+      <div class="vacinacao-section">
+        <h3>📋 Carteiras de Vacinação <span class="req">*</span></h3>
+        <p style="font-size:0.85rem;color:var(--gray-400);margin-bottom:14px;">Ambas as carteiras são obrigatórias para hospedagem.</p>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Carteira de Vacinação Geral <span class="req">*</span></label>
+            <div class="upload-area" id="area-vac-geral" onclick="triggerUpload('vac-geral')">
+              <input type="file" id="vac-geral" accept=".pdf,.jpg,.jpeg,.png" onchange="updateUploadLabel(this,'label-vac-geral','area-vac-geral')" />
+              <span id="label-vac-geral">📎 Clique para anexar</span>
+            </div>
+            <span class="field-error" id="err-vac-geral"></span>
+          </div>
+          <div class="field-group">
+            <label>Vacina Antirrábica (Raiva) <span class="req">*</span></label>
+            <div class="upload-area" id="area-vac-raiva" onclick="triggerUpload('vac-raiva')">
+              <input type="file" id="vac-raiva" accept=".pdf,.jpg,.jpeg,.png" onchange="updateUploadLabel(this,'label-vac-raiva','area-vac-raiva')" />
+              <span id="label-vac-raiva">📎 Clique para anexar</span>
+            </div>
+            <span class="field-error" id="err-vac-raiva"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <!-- "Adicionar outro" só faz sentido depois que o form atual for submetido -->
+        <button type="button" class="btn-secondary" onclick="adicionarOutroCachorro()">+ Adicionar outro cachorro</button>
+        <!--
+          "Próximo: Reserva" → se o form estiver em branco e já houver cachorros cadastrados,
+          o script.js intercepta o submit e chama irParaReserva().
+          Se o form tiver dados, tentará cadastrar o cachorro e DEPOIS o usuário clicar novamente.
+        -->
+        <button type="submit" class="btn-primary" id="btn-proximo-reserva">Próximo: Reserva →</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ─── RESERVA ─── -->
+  <div id="reserva-screen" class="modal-screen modal-wide">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <div class="step-indicator">
+      <span class="step active">1. Cadastro</span>
+      <span class="step-sep">→</span>
+      <span class="step active">2. Seu Pet</span>
+      <span class="step-sep">→</span>
+      <span class="step active">3. Reserva</span>
+    </div>
+    <h2>Solicitação de Reserva 📅</h2>
+    <p class="modal-sub">Informe as datas e confirme os detalhes da hospedagem</p>
+    <form id="reserva-form" onsubmit="handleReserva(event)" novalidate>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Data de entrada <span class="req">*</span></label>
+          <input type="date" id="res-entrada" />
+          <span class="field-error" id="err-res-entrada"></span>
+        </div>
+        <div class="field-group">
+          <label>Data de saída <span class="req">*</span></label>
+          <input type="date" id="res-saida" />
+          <span class="field-error" id="err-res-saida"></span>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Cachorros incluídos na reserva</label>
+        <div id="res-cachorros-lista" class="cachorros-lista"></div>
+      </div>
+      <div class="tutor-confirm">
+        <h3>👤 Confirmação do Tutor</h3>
+        <div id="tutor-info-display" class="tutor-info-box"></div>
+      </div>
+      <div class="field-group">
+        <label>Responsável pela retirada do animal</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="retirada" value="tutor" checked onchange="toggleTerceiro(this)" /> O próprio tutor</label>
+          <label class="radio-label"><input type="radio" name="retirada" value="terceiro" onchange="toggleTerceiro(this)" /> Terceiro</label>
+        </div>
+      </div>
+      <div id="terceiro-section" class="hidden terceiro-box">
+        <h3>👥 Dados do Responsável pela Retirada</h3>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Nome completo <span class="req">*</span></label>
+            <input type="text" id="ter-nome" placeholder="Nome do responsável" />
+          </div>
+          <div class="field-group">
+            <label>CPF <span class="req">*</span></label>
+            <input type="text" id="ter-cpf" placeholder="000.000.000-00" maxlength="14" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Telefone <span class="req">*</span></label>
+            <input type="tel" id="ter-telefone" placeholder="(11) 99999-0000" />
+          </div>
+          <div class="field-group">
+            <label>E-mail <span class="req">*</span></label>
+            <input type="email" id="ter-email" placeholder="responsavel@email.com" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Relação com o tutor <span class="req">*</span></label>
+          <select id="ter-relacao">
+            <option value="">Selecione</option>
+            <option value="Familiar">Familiar</option>
+            <option value="Amigo(a)">Amigo(a)</option>
+            <option value="Vizinho(a)">Vizinho(a)</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary full-width">Confirmar Reserva 🐾</button>
+    </form>
+  </div>
+
+  <!-- ─── COMPROVANTE / CONFIRMAÇÃO ─── -->
+  <div id="confirmacao-screen" class="modal-screen modal-wide">
+    <div class="modal-logo"><span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾</div>
+    <div class="success-icon big">🎉</div>
+    <h2>Reserva Confirmada!</h2>
+    <p class="modal-sub">Comprovante enviado para <strong id="confirm-email-display"></strong></p>
+
+    <div id="comprovante" class="comprovante">
+      <div class="comprovante-header">
+        <div class="comprovante-logo-row">
+          <span style="font-family:'Fredoka One',cursive;font-size:1.3rem;">
+            <span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾
+          </span>
+          <span id="comprovante-numero" class="comprovante-numero"></span>
+        </div>
+        <div class="comprovante-title-bar">COMPROVANTE DE RESERVA</div>
+      </div>
+      <div class="comprovante-body">
+        <div class="comprovante-section">
+          <div class="comprovante-section-title">📅 Período da Hospedagem</div>
+          <div id="comp-periodo" class="comprovante-row"></div>
+          <div id="comp-noites"  class="comprovante-row"></div>
+        </div>
+        <div class="comprovante-section">
+          <div class="comprovante-section-title">👤 Dados do Tutor</div>
+          <div id="comp-tutor" class="comprovante-row"></div>
+        </div>
+        <div class="comprovante-section">
+          <div class="comprovante-section-title">🐶 Pet(s) Hospedado(s)</div>
+          <div id="comp-pets"></div>
+        </div>
+        <div class="comprovante-section">
+          <div class="comprovante-section-title">🔑 Responsável pela Retirada</div>
+          <div id="comp-retirada" class="comprovante-row"></div>
+        </div>
+        <div class="comprovante-total">
+          <span>💰 Valor Estimado Total</span>
+          <span id="comp-valor" class="comprovante-valor"></span>
+        </div>
+        <p class="comprovante-footer-note">
+          Comprovante gerado pelo sistema InnDogz. Dúvidas: contato@inndogz.com.br | (11) 99999-0000
+        </p>
+      </div>
+    </div>
+
+    <div class="email-enviado-box">
+      ✉️ Comprovante completo enviado para o seu e-mail. Verifique sua caixa de entrada.
+    </div>
+    <div class="btn-row" style="margin-top:12px;">
+      <button class="btn-secondary" onclick="imprimirComprovante()">🖨️ Imprimir</button>
+      <button class="btn-primary" onclick="closeOverlay(); resetFlow()">Voltar ao início 🏠</button>
+    </div>
+  </div>
+
+  <!-- ─── PAINEL ADMIN ─── -->
+  <div id="admin-screen" class="modal-screen modal-wide">
+    <button class="modal-close" onclick="closeOverlay()">✕</button>
+    <div class="modal-logo">
+      <span class="logo-inn">Inn</span><span class="logo-dogz">Dogz</span> 🐾
+    </div>
+    <h2>Painel Administrativo 👑</h2>
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>👥 Usuários</h3>
+        <p id="admin-total-usuarios" style="font-size:2rem;font-weight:900;color:var(--purple);">0</p>
+      </div>
+      <div class="admin-card">
+        <h3>📅 Reservas</h3>
+        <p id="admin-total-reservas" style="font-size:2rem;font-weight:900;color:var(--olive-dark);">0</p>
+      </div>
+    </div>
+    <h3 style="margin-bottom:8px;">Usuários cadastrados</h3>
+    <div id="admin-lista-usuarios"></div>
+    <div style="margin-top:20px;text-align:right;">
+      <button class="btn-secondary" onclick="logout()">Sair 👋</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

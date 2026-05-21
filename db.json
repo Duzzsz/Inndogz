@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": "admin-001",
+      "nome": "Administrador",
+      "email": "admin@inndogz.com",
+      "senha": "admin123",
+      "telefone": "(11) 99999-9999",
+      "cpf": "000.000.000-00",
+      "tipo": "admin",
+      "criadoEm": "2026-05-21T01:01:59.520Z"
+    }
+  ],
+  "reservas": [],
+  "codigos": [
+    {
+      "email": "Skartkj.kev@gmail.com",
+      "codigo": "194203",
+      "criadoEm": "2026-05-21T01:10:04.057Z"
+    }
+  ]
+}
